@@ -28,7 +28,7 @@ module.exports.register = (app, database) => {
     });
 
 
-
+/*
     app.get('/courses/:id', async (req, res) => {
         let _id = req.params.id;
         const query = database.query(
@@ -41,7 +41,7 @@ module.exports.register = (app, database) => {
 
 
 
-    app.post('/api/emp', async (req, res) => {
+    app.post('/courses', async (req, res) => {
         let _id = req.body.id;
         let _name = req.body.name;
         let _description = req.body.description;
@@ -54,6 +54,6 @@ module.exports.register = (app, database) => {
         res.status(200).send('Course added successfully!').end();
     });
 
-
+*/
 
 };
