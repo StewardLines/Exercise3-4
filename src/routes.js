@@ -48,7 +48,7 @@ module.exports.register = (app, database) => {
     });
 
 
-    app.post('/courses', async (req, res) => {
+    app.put('/courses', async (req, res) => {
         let _id = req.body.id;
         let _description = req.body.description;
         
