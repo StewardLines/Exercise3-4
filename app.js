@@ -1,6 +1,3 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import SearchByCourseID from './src/screens/SearchByCourseID'
 'use strict';
 
 const express = require('express');
@@ -34,13 +31,3 @@ const startServer = async _ => {
 }
 
 startServer()
-
-const App = () => {
-  return (
-    <View>
-      <SearchByCourseID/>
-    </View>
-  );
-}
-
-export default App;
