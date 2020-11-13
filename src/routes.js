@@ -28,8 +28,8 @@ module.exports.register = (app, database) => {
     });
 
 
-    app.get('/courses/:id', async (req, res) => {
-        let _id = req.params.id;
+    app.get('/courses/:course_id', async (req, res) => {
+        let _id = req.params.course_id;
         const query = database.query(
             'select * from courses where course_id = ?',
             [_id]
