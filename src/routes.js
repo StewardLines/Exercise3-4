@@ -10,17 +10,11 @@ module.exports.register = (app, database) => {
     app.get('/courses', async (req, res) => {
         console.log("=================");
         let query;
-        if (req.query.name) {
-            let _name = req.query.name;
-            query = database.query(
-                'select * from rest_emp where name = ?',
-                [_name]
-            );
-        } else {
-            query = database.query(
-                'SELECT * FROM courses'
-            );
-        }
+        
+        query = database.query(
+            'SELECT * FROM courses'
+        );
+        
         console.log(query);
         const emps = await query;
 
