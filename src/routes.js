@@ -7,7 +7,7 @@ module.exports.register = (app, database) => {
     });
 
 
-    app.get('/api/emp', async (req, res) => {
+    app.get('/courses', async (req, res) => {
         console.log("=================");
         let query;
         if (req.query.name) {
@@ -18,7 +18,7 @@ module.exports.register = (app, database) => {
             );
         } else {
             query = database.query(
-                'SELECT * FROM rest_emp'
+                'SELECT * FROM courses'
             );
         }
         console.log(query);
