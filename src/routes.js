@@ -21,7 +21,7 @@ module.exports.register = (app, database) => {
         res.status(200).send(JSON.stringify(emps)).end();
     });
 
-/*
+
     app.get('/courses/:course_id', async (req, res) => {
         let _id = req.params.course_id;
         const query = database.query(
@@ -47,6 +47,6 @@ module.exports.register = (app, database) => {
         res.status(200).send('Course added successfully!').end();
     });
 
-*/
+
 
 };
