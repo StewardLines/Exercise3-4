@@ -48,5 +48,17 @@ module.exports.register = (app, database) => {
     });
 
 
-
+    app.post('/courses', async (req, res) => {
+        let _id = req.body.id;
+        let _description = req.body.description;
+        
+        const query = database.query(
+            'update courses set description = (?) where course_id = (?)',
+            [_description, _id]
+        );
+        
+        const emps = await query;
+        res.status(200).send('Description changed successfully!').end();
+        
+    });
 };
