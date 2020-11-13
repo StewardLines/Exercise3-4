@@ -7,77 +7,54 @@ module.exports.register = (app, database) => {
     });
 
 
-    app.get('/courses', async (req, res) => {
-        console.log("=================");
-        let query;
-        const query = database.query(
-            'select * from courses ;'
-        );
-        
-        console.log(query);
-        const courses = await query;
-
-        res.status(200).send(JSON.stringify(course)).end();
-        });
-    /*
-    //Gets all courses or specific course with the name
-    app.get('/courses', async (req, res) => {
+    app.get('/api/emp', async (req, res) => {
         console.log("=================");
         let query;
         if (req.query.name) {
             let _name = req.query.name;
             query = database.query(
-                'select * from courses where course_name = ?;',
+                'select * from rest_emp where name = ?',
                 [_name]
             );
         } else {
             query = database.query(
-                'SELECT * FROM courses;'
+                'SELECT * FROM rest_emp'
             );
         }
         console.log(query);
-        const courses = await query;
+        const emps = await query;
 
-        res.status(200).send(JSON.stringify(courses)).end();
+        res.status(200).send(JSON.stringify(emps)).end();
     });
 
 
-    //Gets courses with a specific course id
-    app.get('/courses/:id', async (req, res) => {
-        let _id = req.params.course_id;
+
+    app.get('/api/emp/:id', async (req, res) => {
+        let _id = req.params.id;
         const query = database.query(
-            'select * from courses where course_id = ?;',
+            'select * from rest_emp where id = ?',
             [_id]
         );
-        const courses = await query;
-        res.status(200).send(JSON.stringify(courses)).end();
+        const emps = await query;
+        res.status(200).send(JSON.stringify(emps)).end();
     });
 
 
-    //Adds new courses
-    app.post('/courses', async (req, res) => {
-        let _courseid = req.body.course_id;
+
+    app.post('/api/emp', async (req, res) => {
         let _name = req.body.name;
-        let _description = req.body.description;
+        let _phone = req.body.phone;
+        let _email = req.body.email;
+        let _address = req.body.address;
 
         const query = database.query(
-            'insert into courses(course_id, course_name, description) values (?, ?, ?);',
-            [_courseid, _name, _description]
+            'insert into rest_emp(name, phone, email, address) values (?, ?, ?, ?)',
+            [_name, _phone, _email, _address]
         );
-        const courses = await query;
-        res.status(200).send('Course added successfully!').end();
+        const emps = await query;
+        res.status(200).send('Employee added successfully!').end();
     });
 
-    //Updates the description
-    app.post('/courses', async (req, res) => {
-        let _description = req.body.description;
 
-        const query = database.query(
-            'update courses set description = ?;',
-            [_description]
-        );
-        const courses = await query;
-        res.status(200).send('Course added successfully!').end();
-    });
-*/
+
 };

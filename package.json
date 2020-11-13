@@ -1,13 +1,13 @@
 {
-  "name": "Excerise",
-  "description": "Code for running REST APIs on Node.js with a mysql database",
+  "name": "REST-and-MySQL-example",
+  "description": "Code sample for running REST APIs on Node.js with a mysql database",
   "version": "0.0.2",
   "private": true,
   "license": "Apache-2.0",
-  "author": "Peter & Anro",
+  "author": "Yasaman Amannejad",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StewardLines/Exercise3-4"
+    "url": "https://github.com/Yasaman-A/rest-API-examples"
   },
   "engines": {
     "node": ">=12.0.0"
