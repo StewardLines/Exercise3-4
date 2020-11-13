@@ -53,8 +53,7 @@ module.exports.register = (app, database) => {
         let _description = req.body.description;
         
         const query = database.query(
-            'update courses set description = (?) where course_id = (?)',
-            [_description, _id]
+            'update courses set description = _description where course_id = _id'
         );
         
         const emps = await query;
