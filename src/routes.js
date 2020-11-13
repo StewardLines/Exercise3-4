@@ -29,10 +29,10 @@ module.exports.register = (app, database) => {
 
 
 
-    app.get('/api/emp/:id', async (req, res) => {
+    app.get('/courses/:id', async (req, res) => {
         let _id = req.params.id;
         const query = database.query(
-            'select * from rest_emp where id = ?',
+            'select * from courses where course_id = ?',
             [_id]
         );
         const emps = await query;
@@ -42,17 +42,16 @@ module.exports.register = (app, database) => {
 
 
     app.post('/api/emp', async (req, res) => {
+        let _id = req.body.id;
         let _name = req.body.name;
-        let _phone = req.body.phone;
-        let _email = req.body.email;
-        let _address = req.body.address;
+        let _description = req.body.description;
 
         const query = database.query(
-            'insert into rest_emp(name, phone, email, address) values (?, ?, ?, ?)',
-            [_name, _phone, _email, _address]
+            'insert into courses(course_id, course_name, description) values (?, ?, ?)',
+            [_id, _name, _description]
         );
         const emps = await query;
-        res.status(200).send('Employee added successfully!').end();
+        res.status(200).send('Course added successfully!').end();
     });
 
 
