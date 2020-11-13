@@ -3,7 +3,7 @@
 module.exports.register = (app, database) => {
 
     app.get('/', async (req, res) => {
-        res.status(200).send("You did it! I am now running:) this codfe works ").end();
+        res.status(200).send("You did it! I am now running:) this code works!!!!!!!!!! ").end();
     });
 
 
