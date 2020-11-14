@@ -1,14 +1,10 @@
 {
-  "name": "REST-and-MySQL-example",
-  "description": "Code sample for running REST APIs on Node.js with a mysql database",
+  "name": "Excerise3-4 Backend",
+  "description": "Code for running REST APIs on Node.js with a mysql database",
   "version": "0.0.2",
   "private": true,
   "license": "Apache-2.0",
-  "author": "Yasaman Amannejad",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Yasaman-A/rest-API-examples"
-  },
+  "author": "Peter & Anro",
   "engines": {
     "node": ">=12.0.0"
   },
