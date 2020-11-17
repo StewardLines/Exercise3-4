@@ -1,4 +1,4 @@
-# rest-API-examples
+# Exercise 3-4 Backend
 
 Steps to run the code:
 
@@ -7,3 +7,14 @@ Steps to run the code:
 2. npm install
 
 3. npm start
+
+# Endpoints
+
+|Method| Endpoint|Parameters|Description|
+| ------------- |-------------|-----|-----|
+| GET|/||Returns a list of all courses|
+| POST|/courses|course_id, course_name, description|Add new course|
+| PUT|/courses|course_id, description|Change the description of the given course_id|
+
+
+
