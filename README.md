@@ -11,10 +11,11 @@ Steps to run the code:
 # Endpoints
 
 |Method| Endpoint|Parameters|Description|
-| ------------- |-------------|-----|-----|
-| GET|/||Returns a list of all courses|
-| POST|/courses|course_id, course_name, description|Add new course|
-| PUT|/courses|course_id, description|Change the description of the given course_id|
+|-------------|-------------|-----|-----|
+|GET|/courses||Returns a list of all courses|
+|GET|/course/<course_id>|Returns the course identify by the course_id|
+|POST|/courses|course_id, course_name, description|Add new course|
+|PUT|/courses|course_id, description|Change the description of the given course_id|
 
 
 
